@@ -1,0 +1,78 @@
+1º) 
+var nome = 'lazaro';
+console.log('as 4 primeira letras sao:',nome.substring(0,4));
+
+2º)
+function verificaArray(){
+ 
+var letra = lista.charAt(0);
+   
+ if (letra =='S'){
+      
+alert(letra)
+ 
+ }else{
+   
+alert ("nemhuma cidade comeca com a letra S");
+
+   }
+
+}
+
+console.log(lista.filter(function(x){
+ 
+ return (x.charAt(0) == 'S')?true:false;
+
+}));
+
+3º)
+var Style = function(elemento,nome_atributo,valor){
+    return valor;
+}
+
+function assert(resultado, fn){
+    (resultado === fn)?console.log("teste passou"):console.log("teste falhou");
+}
+
+assert('30px', Style('div','font-size','30px'));
+
+4º)
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Questao 4</title>
+        <style> #box{  background:yellow;  width:200px;  height:200px;  position:relative;  } </style>
+    </head>
+    <body>
+        <div id="box"></div>
+        <script>
+            var box = document.getElementById('box');
+            var posicao = 0;
+            setInterval(function(){
+                if(posicao < 100){
+                    box.style.top  = posicao + 'px';
+                    box.style.left = posicao + 'px';
+                    posicao += 10;
+                    console.log(posicao)
+                }
+            }, 1000);
+        </script>
+    </body>
+</html>
+
+5º)
+var Empregado = function(_nome, _sobrenome, _salarioMensal){
+    var nome = _nome
+    , sobrenome = _sobrenome
+    , salarioMensal = _salarioMensal;
+
+
+   this.calcularSalarioAno = function(){
+        return salarioMensal * 12;
+    }
+    this.dadosEmpregado = function(){
+        return nome + ' ' + sobrenome + ', Sálario: ' + salarioMensal;
+    }
+}
+
